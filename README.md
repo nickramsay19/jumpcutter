@@ -4,9 +4,9 @@ Automatically edits videos. Explanation here: https://www.youtube.com/watch?v=DQ
 ## Additions
 This project has been made to work with my own installation of MacOS.
 
-'''
+```
 python3 jumpcutter.py --input_file video.mp4 --output_file video2.mp4 --sounded_speed 1.2 --silent_speed 8 --frame_margin 2
-'''
+```
 
 ## Some heads-up:
 
