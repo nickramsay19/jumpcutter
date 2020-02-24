@@ -1,5 +1,4 @@
 from contextlib import closing
-#from pil import Image
 import subprocess
 from audiotsm import phasevocoder
 from audiotsm.io.wav import WavReader, WavWriter
@@ -10,13 +9,6 @@ import math
 from shutil import copyfile, rmtree
 import os
 import argparse
-#from pytube import YouTube
-
-def downloadFile(url):
-    name = YouTube(url).streams.first().download()
-    newname = name.replace(' ','_')
-    os.rename(name,newname)
-    return newname
 
 def getMaxVolume(s):
     maxv = float(np.max(s))
@@ -66,17 +58,14 @@ parser.add_argument('--frame_quality', type=int, default=3, help="quality of fra
 
 args = parser.parse_args()
 
-
-
 frameRate = args.frame_rate
 SAMPLE_RATE = args.sample_rate
 SILENT_THRESHOLD = args.silent_threshold
 FRAME_SPREADAGE = args.frame_margin
 NEW_SPEED = [args.silent_speed, args.sounded_speed]
-if args.url != None:
-    INPUT_FILE = downloadFile(args.url)
-else:
-    INPUT_FILE = args.input_file
+
+INPUT_FILE = args.input_file # get input file
+    
 URL = args.url
 FRAME_QUALITY = args.frame_quality
 
