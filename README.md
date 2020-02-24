@@ -1,6 +1,13 @@
 # jumpcutter
 Automatically edits videos. Explanation here: https://www.youtube.com/watch?v=DQ8orIurGxw
 
+## Additions
+This project has been made to work with my own installation of MacOS.
+
+'''
+python3 jumpcutter.py --input_file video.mp4 --output_file video2.mp4 --sounded_speed 1.2 --silent_speed 8 --frame_margin 2
+'''
+
 ## Some heads-up:
 
 It uses Python 3.
@@ -17,5 +24,4 @@ I want to use pyinstaller to turn this into an executable, so non-techy people
 can use it EVEN IF they don't have Python and all those libraries. Jabrils 
 recommended this to me. However, my pyinstaller build did not work. :( HELP
 
-## Building with nix
-`nix-build` to get a script with all the libraries and ffmpeg, `nix-build -A bundle` to get a single binary.
+

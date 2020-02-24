@@ -1,5 +1,5 @@
 from contextlib import closing
-from PIL import Image
+#from pil import Image
 import subprocess
 from audiotsm import phasevocoder
 from audiotsm.io.wav import WavReader, WavWriter
@@ -10,7 +10,7 @@ import math
 from shutil import copyfile, rmtree
 import os
 import argparse
-from pytube import YouTube
+#from pytube import YouTube
 
 def downloadFile(url):
     name = YouTube(url).streams.first().download()
